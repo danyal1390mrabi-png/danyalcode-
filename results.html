@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <!-- ===================== Meta اصلی ===================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>نتایج جستجو | دانیال‌یاب</title>
+  <meta name="description" content="نتایج جستجو در سایت‌ها و پروژه‌های وبی که توسط دانیال کد ساخته شده‌اند.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#05060a">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://danyalcode.ir/results.html">
+
+  <!-- ===================== آیکون‌ها و مانیفست ===================== -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- ===================== بهینه‌سازی بارگذاری فونت و منابع خارجی ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <!-- ===================== استایل اصلی ===================== -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
+
+  <div class="loader" role="status" aria-live="polite">
+    <p class="loader__mark">DM<span>.</span></p>
+    <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+    <p class="loader__percent">0%</p>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand" aria-label="دانیال مرادی — بازگشت به صفحه اصلی">
+        <img class="brand__mark" src="assets/icons/favicon.svg" alt="نماد دانیال مرادی" width="38" height="38">
+        <span class="brand__name">دانیال <b>مرادی</b></span>
+      </a>
+
+      <nav class="nav" aria-label="ناوبری اصلی">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">خانه</a></li>
+          <li><a href="about.html" class="nav__link">درباره من</a></li>
+          <li><a href="index.html#skills" class="nav__link">مهارت‌ها</a></li>
+          <li><a href="index.html#services" class="nav__link">خدمات</a></li>
+          <li><a href="portfolio.html" class="nav__link">نمونه‌کار</a></li>
+          <li><a href="projects.html" class="nav__link">پروژه‌ها</a></li>
+          <li><a href="blog.html" class="nav__link">وبلاگ</a></li>
+          <li><a href="learn.html" class="nav__link">آموزش</a></li>
+          <li><a href="search.html" class="nav__link is-active">جستجو</a></li>
+          <li><a href="index.html#contact" class="nav__link">تماس</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" type="button" aria-label="تغییر حالت روشن و تاریک">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="باز و بسته کردن منو" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ===================== نوار جستجوی فشرده بالای نتایج ===================== -->
+    <section class="results-bar" aria-label="جستجوی مجدد">
+      <div class="container results-bar__inner">
+        <a href="search.html" class="results-bar__logo" aria-label="بازگشت به صفحه جستجو">دانیال<b>یاب</b></a>
+
+        <form id="search-form" class="search-form search-form--compact" role="search" aria-label="جستجوی سایت‌های دانیال کد" action="results.html" method="get">
+          <svg class="search-form__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input type="search" id="search-input" name="q" placeholder="جستجوی دوباره…" autocomplete="off" aria-label="عبارت جستجو">
+          <button type="submit" class="btn btn--primary">جستجو</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== نتایج ===================== -->
+    <section aria-labelledby="search-results-heading">
+      <div class="container">
+        <h1 id="search-results-heading" class="visually-hidden">نتایج جستجو</h1>
+        <p class="search-meta" id="search-meta" aria-live="polite"></p>
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== فوتر ===================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span id="current-year">2026</span> دانیال مرادی. تمامی حقوق محفوظ است.</p>
+      <nav class="footer-nav" aria-label="لینک‌های فوتر">
+        <a href="https://kharid.danyalcode.ir/" target="_blank" rel="noopener">سفارش طراحی سایت</a>
+        <a href="index.html">خانه</a>
+        <a href="about.html">درباره من</a>
+        <a href="portfolio.html">نمونه‌کار</a>
+        <a href="projects.html">پروژه‌ها</a>
+        <a href="blog.html">وبلاگ</a>
+        <a href="learn.html">آموزش</a>
+        <a href="search.html">جستجو</a>
+        <a href="index.html#contact">تماس</a>
+      </nav>
+      <button class="back-to-top" aria-label="بازگشت به بالای صفحه">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <!-- ===================== ایندکس و موتور جستجوی داخلی ===================== -->
+  <script src="search-data.js" defer></script>
+  <script src="search-engine.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="3d.js?v=2" defer></script>
+</body>
+</html>
